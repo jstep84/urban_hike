@@ -1,0 +1,18 @@
+h1 { 
+	text-align: center;
+	color: white;
+	font-size: 80px;
+}
+
+body {
+	margin: 30px;
+	background-image: url('http://www.seanshannonphotography.com/wp-content/uploads/2011/04/Downtown-Seattle-1024x679(pp_w940_h623).jpg'); 
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h2 { 
+	text-align: center;
+	color: white;
+	font-size: 40px;
+}
