@@ -7,6 +7,10 @@ router.get('/login', function(req, res) {
 	res.render('auth/login');
 });
 
+router.get('/map', function(req, res) {
+	res.render('auth/map');
+});
+
 // POST login input from user, check credentials
 router.post('/login', function(req, res) {
 	db.user.authenticate(req.body.email, req.body.password,function(err, user) {
@@ -15,7 +19,7 @@ router.post('/login', function(req, res) {
 		} else if (user) {
 			req.session.user = user.id;
 			req.flash('success','welcome back');
-			res.redirect('/');
+			res.redirect('/auth/map');
 		} else {
 			req.flash('danger','invalid credentials');
 			res.redirect('/auth/login');
