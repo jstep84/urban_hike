@@ -9,10 +9,27 @@ body {
 	background-image: url('http://www.seanshannonphotography.com/wp-content/uploads/2011/04/Downtown-Seattle-1024x679(pp_w940_h623).jpg'); 
 	background-size: cover;
 	background-repeat: no-repeat;
+	color: white;
 }
 
 h2 { 
 	text-align: center;
 	color: white;
 	font-size: 40px;
+}
+
+p {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+#map {
+	height: 500px;
+	width: 800px;
+}
+
+form {
+	width: 200px;
+	text-align: center;
 }
