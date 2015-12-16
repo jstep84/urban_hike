@@ -5,6 +5,7 @@ h1 {
 }
 
 body {
+	text-align: center;
 	margin: 30px;
 	background-image: url('http://www.seanshannonphotography.com/wp-content/uploads/2011/04/Downtown-Seattle-1024x679(pp_w940_h623).jpg'); 
 	background-size: cover;
@@ -25,8 +26,10 @@ p {
 }
 
 #map {
-	height: 500px;
-	width: 800px;
+	text-align: center;
+	height: 300px;
+	width: 400px;
+	border-radius: 20px;
 }
 
 form {
