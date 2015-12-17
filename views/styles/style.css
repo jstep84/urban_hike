@@ -1,3 +1,8 @@
+#wrapper {
+	width: 1000px; 
+	margin: 0 auto; 
+}
+
 h1 { 
 	text-align: center;
 	color: white;
@@ -26,13 +31,15 @@ p {
 }
 
 #map {
+	margin-left: 100px;
 	text-align: center;
-	height: 300px;
-	width: 400px;
+	height: 500px;
+	width: 800px;
 	border-radius: 20px;
 }
 
 form {
+	margin-left: 400px;
 	width: 200px;
 	text-align: center;
 }

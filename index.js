@@ -4,8 +4,11 @@ var db = require('./models');
 var session = require('express-session');
 var flash = require('connect-flash');
 
+
+
 var app = express();
 app.set('view engine', 'ejs');
+
 
 app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -37,7 +40,7 @@ app.use(function(req,res,next){
 app.use('/',require('./controllers/main.js'));
 app.use('/auth',require('./controllers/auth.js'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000)
 
 
 
