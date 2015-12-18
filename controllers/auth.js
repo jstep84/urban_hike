@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var gmapsApi = process.env.GMAPS_API;
 
+
 // GET login and display form
 router.get('/login', function(req, res) {
 	res.render('auth/login');
