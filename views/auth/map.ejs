@@ -1,40 +1,66 @@
 <% include ../partials/header.ejs %>
 
-<a href="/auth/logout" class="btn btn-primary">Logout</a>
-<p>map page works!</p>
-<div id='map'></div>		
-	<div id="sector">
-	<div id="nw" style="display: none">
-		<h3>hike 1</h3>
-		<h3>hike 2</h3>
-		<h3>hike 3</h3>
-	</div>
-	<div id="ne" style="display: none">
-		<h3>hike 4</h3>
-		<h3>hike 5</h3>
-		<h3>hike 6</h3>
-	</div>
-	<div id="cw"style="display: none">
-		<h3>hike 7</h3>
-		<h3>hike 8</h3>
-		<h3>hike 9</h3>
-	</div>
-	<div id="ce" style="display: none">
-		<h3>hike A</h3>
-		<h3>hike B</h3>
-		<h3>hike C</h3>
-	</div>
-	<div id="sw" style="display: none">
-		<h3>hike D</h3>
-		<h3>hike E</h3>
-		<h3>hike F</h3>
-	</div>
-	<div id="se" style="display: none">
-		<h3>hike G</h3>
-		<h3>hike H</h3>
-		<h3>hike I</h3>
+<div class="container-fluid">
+	<a href="/auth/logout" class="btn btn-primary">Logout</a>
+	<br>
+	<div class="row">
+		<div class="col-md-8">
+			<div id='map'></div>
+		</div>		
+		<div class="col-md-4">	
+			<div id="sector">
+			<div id="nw" style="display: none">
+				<h2>Northwest Seattle Sector</h2>
+				<h3>path 1</h3>
+				<h3>path 2</h3>
+				<h3>path 3</h3>
+				<h3>path 4</h3>
+				<h3>path 5</h3>
+			</div>
+			<div id="ne" style="display: none">
+				<h2>Northeast Seattle Sector</h2>
+				<h3>path 1</h3>
+				<h3>path 2</h3>
+				<h3>path 3</h3>
+				<h3>path 4</h3>
+				<h3>path 5</h3>
+			</div>
+			<div id="cw"style="display: none">
+				<h2>Downtown Sector</h2>
+				<h3>path 1</h3>
+				<h3>path 2</h3>
+				<h3>path 3</h3>
+				<h3>path 4</h3>
+				<h3>path 5</h3>
+			</div>
+			<div id="ce" style="display: none">
+				<h2>Capitol Hill</h2>
+				<h3>path 1</h3>
+				<h3>path 2</h3>
+				<h3>path 3</h3>
+				<h3>path 4</h3>
+				<h3>path 5</h3>
+			</div>
+			<div id="sw" style="display: none">
+				<h2>West Seattle Sector</h2>
+				<h3>path 1</h3>
+				<h3>path 2</h3>
+				<h3>path 3</h3>
+				<h3>path 4</h3>
+				<h3>path 5</h3>
+			</div>
+			<div id="se" style="display: none">
+				<h2>South Seattle Sector</h2>
+				<h3>path 1</h3>
+				<h3>path 2</h3>
+				<h3>path 3</h3>
+				<h3>path 4</h3>
+				<h3>path 5</h3>
+			</div>
+		</div>
 	</div>
 </div>
+
 <script src="http://www.google.com/jsapi?key=<%= gmapsApi %>"></script>
 <script>
 	(function () {
@@ -85,12 +111,12 @@
 						}
 					}, 
 					function () {
-						markOutLocation(59.3325215, 18.0643818);
+						markOutLocation(47.572747, -122.384262);
 					}
 				);
 			}
 			else {
-				markOutLocation(-27.121192, -109.366424);
+				markOutLocation(47.572747, -122.384262);
 			}
 		});	
 	})();
