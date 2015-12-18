@@ -2,9 +2,39 @@
 
 <a href="/auth/logout" class="btn btn-primary">Logout</a>
 <p>map page works!</p>
-<div id='map'></div>	
-<div id='cw'></div>
-
+<div id='map'></div>		
+	<div id="sector">
+	<div id="nw" style="display: none">
+		<h3>hike 1</h3>
+		<h3>hike 2</h3>
+		<h3>hike 3</h3>
+	</div>
+	<div id="ne" style="display: none">
+		<h3>hike 4</h3>
+		<h3>hike 5</h3>
+		<h3>hike 6</h3>
+	</div>
+	<div id="cw"style="display: none">
+		<h3>hike 7</h3>
+		<h3>hike 8</h3>
+		<h3>hike 9</h3>
+	</div>
+	<div id="ce" style="display: none">
+		<h3>hike A</h3>
+		<h3>hike B</h3>
+		<h3>hike C</h3>
+	</div>
+	<div id="sw" style="display: none">
+		<h3>hike D</h3>
+		<h3>hike E</h3>
+		<h3>hike F</h3>
+	</div>
+	<div id="se" style="display: none">
+		<h3>hike G</h3>
+		<h3>hike H</h3>
+		<h3>hike I</h3>
+	</div>
+</div>
 <script src="http://www.google.com/jsapi?key=<%= gmapsApi %>"></script>
 <script>
 	(function () {
@@ -31,22 +61,27 @@
 						if (position.coords.latitude >= 47.647 && position.coords.longitude <= -122.335) {
 							//do this;
 							console.log('user is in the North-West sector');
+							document.getElementById("nw").style.display = "block";
 						} else if (position.coords.latitude >= 47.647 && position.coords.longitude > -122.335) {
 							//do this;
 							console.log('user is in the North-East sector');
+							document.getElementById("ne").style.display = "block";
 						} else if (position.coords.latitude < 47.647 && position.coords.latitude >= 47.601 && position.coords.longitude <= -122.320) {
 							//do this;
 							console.log('user is in the Central-West sector');
-							document.getElementById("cw");
+							document.getElementById("cw").style.display = "block";
 						} else if (position.coords.latitude < 47.647 && position.coords.latitude >= 47.601 && position.coords.longitude > -122.320) {
 							//do this;
 							console.log('user is in the Central-East sector');
+							document.getElementById("ce").style.display = "block";
 						} else if (position.coords.latitude < 47.601 && position.coords.longitude <= -122.343) {
 							//do this;
 							console.log('user is in the South-West sector');
+							document.getElementById("sw").style.display = "block";
 						} else {
 							//do this;
 							console.log('user is in the South-East sector');
+							document.getElementById("se").style.display = "block";
 						}
 					}, 
 					function () {
